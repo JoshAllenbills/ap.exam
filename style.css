@@ -39,7 +39,7 @@
 }
 form #output {
     display: flex;
-    justify-content: flex-end;
+    justify-content:center;
     margin: 15px 0;
 }
 form #output input {
@@ -51,7 +51,7 @@ form #output input {
     background-color:white;
 }
 body{
-    background-color:yellow;
+    background-color:white;
 }
 .text{
     color:black;
