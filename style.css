@@ -1,75 +1,72 @@
-/* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Calculator Container */
 .calculator {
-    background-color: #ffffff;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 320px; /* Adjusted width to fit 4 buttons nicely */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Input Field */
 #res {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 1.5em;
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    margin-bottom: 15px;
     text-align: right;
-    border: 1px solid #ccc;
+    padding: 10px;
+    border: 2px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
-/* Buttons */
+.buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
 button {
-    width: 60px;
+    width: 100%;
     height: 60px;
-    margin: 5px;
-    font-size: 1.2em;
+    font-size: 20px;
     border: none;
     border-radius: 5px;
+    background: #e0e0e0;
     cursor: pointer;
-    background-color: #e0e0e0;
-    transition: background-color 0.2s ease;
+    transition: background 0.3s, transform 0.1s;
 }
 
 button:hover {
-    background-color: #d5d5d5;
+    background: #d5d5d5;
+    transform: scale(1.05);
 }
 
-button.operator {
-    background-color: #f9a825;
+/* Special styling for History and Equals button */
+button:nth-child(3) { /* History button */
+    background: #6c5ce7;
     color: white;
 }
-
-button.operator:hover {
-    background-color: #f57f17;
+button:nth-child(3):hover {
+    background: #5a4dbf;
 }
 
-button.equal {
-    background-color: #43a047;
+button:nth-child(19) { /* Equals button */
+    background: #00b894;
     color: white;
 }
-
-button.equal:hover {
-    background-color: #388e3c;
-}
-
-button.clear {
-    background-color: #e53935;
-    color: white;
-}
-
-button.clear:hover {
-    background-color: #c62828;
+button:nth-child(19):hover {
+    background: #00997c;
 }
